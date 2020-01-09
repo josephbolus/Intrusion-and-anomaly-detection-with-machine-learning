@@ -9,7 +9,7 @@ import argparse
 
 def get_args():
     parser = argparse.ArgumentParser()
-    parser.add_argument('-t', '--traning_data', help = 'Training data', required = True)
+    parser.add_argument('-t', '--training_data', help = 'Training data', required = True)
     parser.add_argument('-v', '--testing_data', help = 'Testing data', required = True)
     return vars(parser.parse_args())
 
