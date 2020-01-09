@@ -18,7 +18,8 @@ testing_features, testing_labels = get_data_details(testing_data)
 # LOGISTIC REGRESSION CLASSIFIER
 print "\n\n=-=-=-=-=-=-=- Logistic Regression Classifier -=-=-=-=-=-\n"
 
-attack_classifier = linear_model.LogisticRegression(C = 1e5)
+# Fixed FutureWarning https://machinelearningmastery.com/how-to-fix-futurewarning-messages-in-scikit-learn/
+attack_classifier = linear_model.LogisticRegression(solver='lbfgs', C = 1e5)
 attack_classifier.fit(training_features, training_labels)
 
 predictions = attack_classifier.predict(testing_features)
