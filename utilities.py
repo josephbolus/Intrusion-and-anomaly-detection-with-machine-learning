@@ -21,7 +21,7 @@ def get_data_details(csv_data):
         return features, labels
 
 
-def get_occuracy(real_labels, predicted_labels, fltr):
+def get_accuracy(real_labels, predicted_labels, fltr):
         real_label_count = 0.0
         predicted_label_count = 0.0
 
